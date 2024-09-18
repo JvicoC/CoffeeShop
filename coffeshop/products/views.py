@@ -18,11 +18,7 @@ class ProductListView(generic.ListView):
     model=Product
     template_name="products/list_product.html"
     context_object_name='products'
-
-    def form_valid(self, form):
-        form.save()
-        return super().form_valid(form)
-    
+  
     
 class ProductEditView(generic.FormView):
     model=Product

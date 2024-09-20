@@ -19,11 +19,11 @@ class ProductForm(forms.Form):
         )
 
 class ProductFormEdit(forms.Form):
-    id= forms.CharField(max_length=200, label="ID", initial=Product.objects.filter(id=3).first().id)
-    name= forms.CharField(max_length=200, label="nombre", initial=Product.objects.filter(id=3).first().name)
-    description = forms.CharField(max_length=300, label="descripcion",initial=Product.objects.filter(id=3).first().description)
-    price=forms.DecimalField(max_digits=10, decimal_places=2, label="precio", initial=Product.objects.filter(id=3).first().price)
-    available=forms.BooleanField(initial=Product.objects.filter(id=3).first().available,label="disponible", required=False)
+    id= forms.CharField(max_length=200, label="ID", initial=Product.objects.filter(id=1).first().id)
+    name= forms.CharField(max_length=200, label="nombre", initial=Product.objects.filter(id=1).first().name)
+    description = forms.CharField(max_length=300, label="descripcion",initial=Product.objects.filter(id=1).first().description)
+    price=forms.DecimalField(max_digits=10, decimal_places=2, label="precio", initial=Product.objects.filter(id=1).first().price)
+    available=forms.BooleanField(initial=Product.objects.filter(id=1).first().available,label="disponible", required=False)
     photo= forms.ImageField(label="foto",required=False)
 
     def update(self, idupdate):
